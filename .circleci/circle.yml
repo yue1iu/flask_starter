@@ -1,0 +1,19 @@
+machine:
+  python:
+    version: 3.6.3
+  services:
+    - docker
+  environment:
+dependencies:
+  cache_directories:
+    - "~/.docker"
+  override:
+    - python --version
+    - pip --version
+    - pip install -r requirements.txt
+    - mkdir -p ~/.docker
+    - docker --version
+    - docker info
+test:
+  override:
+    - pytest

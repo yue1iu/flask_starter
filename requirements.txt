@@ -1,0 +1,6 @@
+Flask==0.12.2
+
+#Testing
+pytest==3.2.3
+pytest-flask==0.10.0
+
